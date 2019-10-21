@@ -20,3 +20,5 @@ db_sub <- db %>%
 #create basic line graph
 ggplot(data = db_sub, aes(x = year, y = deaths_per_100k))+
   geom_line(aes(color = country_name))
+
+ggsave(here("Final graphs", "disease_graph.png"))
